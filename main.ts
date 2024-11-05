@@ -3,7 +3,7 @@ import { findSiteDifferences } from "./src/lib.ts";
 import { createNotifiers } from "./src/notifier.ts";
 import { hashWebpages } from "./src/web.ts";
 
-import { join, resolve } from "@std/path";
+import { resolve } from "@std/path";
 
 const home = Deno.env.get("HOME");
 if (!home) {
