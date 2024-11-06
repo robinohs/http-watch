@@ -8,6 +8,8 @@
         "@std/fs": "jsr:@std/fs@^1.0.5",
         "@std/path": "jsr:@std/path@^1.0.8",
         "@std/yaml": "jsr:@std/yaml@^1.0.5",
+        "@types/nodemailer": "npm:@types/nodemailer@^6.4.16",
+        "nodemailer": "npm:nodemailer@^6.9.16",
         "zod": "npm:zod@^3.23.8"
     },
     "fmt": {

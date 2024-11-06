@@ -1,7 +1,16 @@
 import z from "zod";
 
 const notifiers_schema = z.object({
-    log: z.null().optional(),
+    log: z.object({}).optional(),
+    mail: z.object({
+        hostname: z.string(),
+        from: z.string().email(),
+        port: z.number().default(587),
+        tls: z.boolean().default(true),
+        username: z.string(),
+        password: z.string(),
+        recipients: z.array(z.string().email()),
+    }).optional(),
 }, { message: "Notifier required" });
 export type NotifierConfig = z.infer<typeof notifiers_schema>;
 
