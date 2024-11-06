@@ -1,7 +1,7 @@
 import z from "zod";
 
 const notifiers_schema = z.object({
-    log: z.null().optional(),
+    log: z.object({}).optional(),
 }, { message: "Notifier required" });
 export type NotifierConfig = z.infer<typeof notifiers_schema>;
 

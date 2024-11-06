@@ -1,4 +1,4 @@
-import { NotifierConfig } from "./schemas.ts";
+import type { NotifierConfig } from "./schemas.ts";
 
 export type Notifier = {
     run: (url: string) => Promise<void>;
@@ -6,8 +6,7 @@ export type Notifier = {
 
 export function createNotifiers(notifier_config: NotifierConfig): Notifier[] {
     const notifiers: Notifier[] = [];
-    console.log(notifier_config);
-    if (notifier_config.log || notifier_config.log === null) {
+    if (notifier_config.log) {
         notifiers.push({
             // deno-lint-ignore require-await
             run: async (url) => {
