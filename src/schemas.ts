@@ -1,6 +1,10 @@
 import z from "zod";
 
 const notifiers_schema = z.object({
+    telegram: z.object({
+        token: z.string(),
+        chat_ids: z.array(z.number()),
+    }).optional(),
     log: z.object({}).optional(),
 }, { message: "Notifier required" });
 export type NotifierConfig = z.infer<typeof notifiers_schema>;

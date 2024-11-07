@@ -1,6 +1,6 @@
 import { assert } from "@std/assert/assert";
-import { Notifier } from "./notifier.ts";
-import { SiteData } from "./schemas.ts";
+import type { Notifier } from "./notifier.ts";
+import type { SiteData } from "./schemas.ts";
 
 export async function findSiteDifferences(
     old_data: SiteData[],

@@ -8,6 +8,7 @@
         "@std/fs": "jsr:@std/fs@^1.0.5",
         "@std/path": "jsr:@std/path@^1.0.8",
         "@std/yaml": "jsr:@std/yaml@^1.0.5",
+        "telegraf": "npm:telegraf@^4.16.3",
         "zod": "npm:zod@^3.23.8"
     },
     "fmt": {
